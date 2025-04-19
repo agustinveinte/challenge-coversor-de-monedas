@@ -124,7 +124,8 @@ public class ConversorAPP {
             var montoResultante = codigoMonedaOrigen.convertir(monto, codigoMonedaDestino);
             System.out.println("El valor " + monto + " [" + codigoMonedaOrigen.base_code() + "] " +
                     "corresponde al valor final de =>>> "
-                    + montoResultante + " [" + codigoMonedaDestino + "]");
+                    + String.format("%,.2f", montoResultante) +
+                    " [" + codigoMonedaDestino + "]");
             System.out.println("Pulse ENTER para continuar...");
             Scanner lectura = new Scanner(System.in);
             lectura.nextLine();
